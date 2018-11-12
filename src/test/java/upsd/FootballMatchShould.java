@@ -25,4 +25,15 @@ public class FootballMatchShould {
 
         assertThat(match.score(), is("1-0"));
     }
+
+    @Test
+    public void record_when_away_team_scores() {
+        FootballMatch match = new FootballMatch();
+
+
+        match.scoreFor("Away");
+
+
+        assertThat(match.score(), is("0-1"));
+    }
 }
