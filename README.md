@@ -19,3 +19,10 @@ Furthermore, imagine that football match winners were based on a target score as
 `When` the home team scores a goal
 
 `Then` the home team has won
+
+## How it was refactored
+See [this branch](https://github.com/upsd/human-friendly-code-2/tree/original-code) for how an original solution was
+reached, and how it was refactored into a much more human-friendly solution.
+
+Take a look at the [commits](https://github.com/upsd/human-friendly-code-2/commits/master) for more detail on the steps
+taken to refactor the original solution.
