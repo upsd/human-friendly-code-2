@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class FootballMatch {
 
+    private final int ONE_GOAL = 1;
     private final int scoreLimit;
     private HashMap<Team, Integer> scores = new HashMap<>();
 
@@ -48,7 +49,7 @@ public class FootballMatch {
     private void scoreGoalFor(Team team) {
         int score = goalsFor(team);
 
-        this.scores.put(team, score + 1);
+        this.scores.put(team, score + ONE_GOAL);
     }
 
     private boolean hasWon(Team home) {
