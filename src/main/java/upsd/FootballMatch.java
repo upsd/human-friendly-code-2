@@ -20,26 +20,30 @@ public class FootballMatch {
     }
 
     public String score() {
-        return this.scores.get(Team.HOME) + "-" + this.scores.get(Team.AWAY);
+        return goalsFor(Team.HOME) + "-" + goalsFor(Team.AWAY);
     }
 
     public void scoreFor(Team team) {
         if (!status().contains("won")) {
-            int score = this.scores.get(team);
+            int score = goalsFor(team);
 
             this.scores.put(team, score + 1);
         }
     }
 
     public String status() {
-        if (this.scores.get(Team.HOME) == scoreLimit) {
+        if (goalsFor(Team.HOME) == scoreLimit) {
             return "Home team has won";
         }
 
-        if (this.scores.get(Team.AWAY) == scoreLimit) {
+        if (goalsFor(Team.AWAY) == scoreLimit) {
             return "Away team has won";
         }
 
         return "Playing";
+    }
+
+    private int goalsFor(Team home) {
+        return this.scores.get(home);
     }
 }
