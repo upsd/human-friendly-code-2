@@ -43,7 +43,7 @@ public class FootballMatchShould {
 
 
 
-        assertThat(match.status(), is("Playing"));
+        assertThat(match.status(), is(MatchStatus.PLAYING));
     }
 
     @Test
@@ -54,7 +54,7 @@ public class FootballMatchShould {
         match.scoreFor(Team.HOME);
 
 
-        assertThat(match.status(), is("Home team has won"));
+        assertThat(match.status(), is(MatchStatus.HOME_WON));
     }
 
     @Test
@@ -65,7 +65,7 @@ public class FootballMatchShould {
         match.scoreFor(Team.AWAY);
 
 
-        assertThat(match.status(), is("Away team has won"));
+        assertThat(match.status(), is(MatchStatus.AWAY_WON));
     }
 
     @Test
@@ -76,7 +76,7 @@ public class FootballMatchShould {
         match.scoreFor(Team.HOME);
 
 
-        assertThat(match.status(), is("Away team has won"));
+        assertThat(match.status(), is(MatchStatus.AWAY_WON));
         assertThat(match.score(), is("0-1"));
     }
 }

@@ -24,23 +24,23 @@ public class FootballMatch {
     }
 
     public void scoreFor(Team team) {
-        if (!status().contains("won")) {
+        if (status() == MatchStatus.PLAYING) {
             int score = goalsFor(team);
 
             this.scores.put(team, score + 1);
         }
     }
 
-    public String status() {
+    public MatchStatus status() {
         if (hasWon(Team.HOME)) {
-            return "Home team has won";
+            return MatchStatus.HOME_WON;
         }
 
         if (hasWon(Team.AWAY)) {
-            return "Away team has won";
+            return MatchStatus.AWAY_WON;
         }
 
-        return "Playing";
+        return MatchStatus.PLAYING;
     }
 
     private boolean hasWon(Team home) {
