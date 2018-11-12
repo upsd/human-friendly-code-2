@@ -25,9 +25,7 @@ public class FootballMatch {
 
     public void scoreFor(Team team) {
         if (status() == MatchStatus.PLAYING) {
-            int score = goalsFor(team);
-
-            this.scores.put(team, score + 1);
+            scoreGoalFor(team);
         }
     }
 
@@ -41,6 +39,12 @@ public class FootballMatch {
         }
 
         return MatchStatus.PLAYING;
+    }
+
+    private void scoreGoalFor(Team team) {
+        int score = goalsFor(team);
+
+        this.scores.put(team, score + 1);
     }
 
     private boolean hasWon(Team home) {
