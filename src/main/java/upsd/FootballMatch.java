@@ -47,7 +47,7 @@ public class FootballMatch {
     }
 
     private void scoreGoalFor(Team team) {
-        this.scores.put(team, goalsFor(team) + ONE_GOAL);
+        scores.put(team, goalsFor(team) + ONE_GOAL);
     }
 
     private boolean hasWon(Team team) {
@@ -55,6 +55,6 @@ public class FootballMatch {
     }
 
     private int goalsFor(Team team) {
-        return this.scores.get(team);
+        return scores.get(team);
     }
 }
