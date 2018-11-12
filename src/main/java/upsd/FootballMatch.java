@@ -32,15 +32,19 @@ public class FootballMatch {
     }
 
     public String status() {
-        if (goalsFor(Team.HOME) == scoreLimit) {
+        if (hasWon(Team.HOME)) {
             return "Home team has won";
         }
 
-        if (goalsFor(Team.AWAY) == scoreLimit) {
+        if (hasWon(Team.AWAY)) {
             return "Away team has won";
         }
 
         return "Playing";
+    }
+
+    private boolean hasWon(Team home) {
+        return goalsFor(home) == scoreLimit;
     }
 
     private int goalsFor(Team home) {
