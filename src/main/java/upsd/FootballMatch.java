@@ -24,7 +24,7 @@ public class FootballMatch {
     }
 
     public void scoreFor(Team team) {
-        if (status() == MatchStatus.PLAYING) {
+        if (stillPlaying()) {
             scoreGoalFor(team);
         }
     }
@@ -39,6 +39,10 @@ public class FootballMatch {
         }
 
         return MatchStatus.PLAYING;
+    }
+
+    private boolean stillPlaying() {
+        return status() == MatchStatus.PLAYING;
     }
 
     private void scoreGoalFor(Team team) {
