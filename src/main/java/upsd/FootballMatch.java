@@ -50,11 +50,11 @@ public class FootballMatch {
         this.scores.put(team, goalsFor(team) + ONE_GOAL);
     }
 
-    private boolean hasWon(Team home) {
-        return goalsFor(home) == scoreLimit;
+    private boolean hasWon(Team team) {
+        return goalsFor(team) == scoreLimit;
     }
 
-    private int goalsFor(Team home) {
-        return this.scores.get(home);
+    private int goalsFor(Team team) {
+        return this.scores.get(team);
     }
 }
