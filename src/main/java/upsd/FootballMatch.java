@@ -27,6 +27,10 @@ public class FootballMatch {
             return "Home team has won";
         }
 
+        if (awayScore == scoreLimit) {
+            return "Away team has won";
+        }
+
         return "Playing";
     }
 }

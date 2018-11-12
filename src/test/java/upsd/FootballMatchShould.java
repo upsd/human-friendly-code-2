@@ -56,4 +56,15 @@ public class FootballMatchShould {
 
         assertThat(match.status(), is("Home team has won"));
     }
+
+    @Test
+    public void report_game_has_been_won_by_away_team() {
+        FootballMatch match = new FootballMatch(1);
+
+
+        match.scoreFor("Away");
+
+
+        assertThat(match.status(), is("Away team has won"));
+    }
 }
