@@ -47,9 +47,7 @@ public class FootballMatch {
     }
 
     private void scoreGoalFor(Team team) {
-        int score = goalsFor(team);
-
-        this.scores.put(team, score + ONE_GOAL);
+        this.scores.put(team, goalsFor(team) + ONE_GOAL);
     }
 
     private boolean hasWon(Team home) {
