@@ -16,4 +16,8 @@ public class FootballMatch {
             awayScore += 1;
         }
     }
+
+    public String status() {
+        return "Playing";
+    }
 }

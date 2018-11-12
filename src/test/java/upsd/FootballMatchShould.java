@@ -36,4 +36,13 @@ public class FootballMatchShould {
 
         assertThat(match.score(), is("0-1"));
     }
+
+    @Test
+    public void report_game_is_being_played_if_no_one_has_won() {
+        FootballMatch match = new FootballMatch();
+
+
+
+        assertThat(match.status(), is("Playing"));
+    }
 }
