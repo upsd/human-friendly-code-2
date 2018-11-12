@@ -2,8 +2,13 @@ package upsd;
 
 public class FootballMatch {
 
+    private final int scoreLimit;
     private int homeScore;
     private int awayScore;
+
+    public FootballMatch(int scoreLimit) {
+        this.scoreLimit = scoreLimit;
+    }
 
     public String score() {
         return homeScore + "-" + awayScore;
@@ -18,6 +23,10 @@ public class FootballMatch {
     }
 
     public String status() {
+        if (homeScore == scoreLimit) {
+            return "Home team has won";
+        }
+
         return "Playing";
     }
 }
