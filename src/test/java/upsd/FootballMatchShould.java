@@ -67,4 +67,16 @@ public class FootballMatchShould {
 
         assertThat(match.status(), is("Away team has won"));
     }
+
+    @Test
+    public void cannot_score_after_game_has_been_won() {
+        FootballMatch match = new FootballMatch(1, 0, 1);
+
+
+        match.scoreFor("Home");
+
+
+        assertThat(match.status(), is("Away team has won"));
+        assertThat(match.score(), is("0-1"));
+    }
 }
