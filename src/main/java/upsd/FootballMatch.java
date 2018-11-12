@@ -20,9 +20,9 @@ public class FootballMatch {
         return homeScore + "-" + awayScore;
     }
 
-    public void scoreFor(String team) {
+    public void scoreFor(Team team) {
         if (!status().contains("won")) {
-            if (team.equals("Home")) {
+            if (team.equals(Team.HOME)) {
                 homeScore += 1;
             } else {
                 awayScore += 1;

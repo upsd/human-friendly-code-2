@@ -20,7 +20,7 @@ public class FootballMatchShould {
         FootballMatch match = new FootballMatch(5);
 
 
-        match.scoreFor("Home");
+        match.scoreFor(Team.HOME);
 
 
         assertThat(match.score(), is("1-0"));
@@ -31,7 +31,7 @@ public class FootballMatchShould {
         FootballMatch match = new FootballMatch(5);
 
 
-        match.scoreFor("Away");
+        match.scoreFor(Team.AWAY);
 
 
         assertThat(match.score(), is("0-1"));
@@ -51,7 +51,7 @@ public class FootballMatchShould {
         FootballMatch match = new FootballMatch(1);
 
 
-        match.scoreFor("Home");
+        match.scoreFor(Team.HOME);
 
 
         assertThat(match.status(), is("Home team has won"));
@@ -62,7 +62,7 @@ public class FootballMatchShould {
         FootballMatch match = new FootballMatch(1);
 
 
-        match.scoreFor("Away");
+        match.scoreFor(Team.AWAY);
 
 
         assertThat(match.status(), is("Away team has won"));
@@ -73,7 +73,7 @@ public class FootballMatchShould {
         FootballMatch match = new FootballMatch(1, 0, 1);
 
 
-        match.scoreFor("Home");
+        match.scoreFor(Team.HOME);
 
 
         assertThat(match.status(), is("Away team has won"));
