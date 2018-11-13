@@ -26,3 +26,6 @@ reached, and how it was refactored into a much more human-friendly solution.
 
 Take a look at the [commits](https://github.com/upsd/human-friendly-code-2/commits/master) for more detail on the steps
 taken to refactor the original solution.
+
+N.B. You can change the public interface of this code, this code is not in production. As long as it satisfies the
+requirements supplied above, any changes are valid.
